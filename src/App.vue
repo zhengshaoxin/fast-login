@@ -5,3 +5,7 @@
     </transition>
   </div>
 </template>
+
+<style lang="less">
+@import './style/weui/base/reset.less';
+</style>

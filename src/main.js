@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App'
-import Demo from './components/demo'
+import store from './store'
+import Home from './components/home'
 
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: Demo}
+  { path: '/', component: Home }
 ];
 
 const router = new VueRouter({
@@ -14,8 +15,9 @@ const router = new VueRouter({
 })
 
 const app = new Vue({
+  store,
   router,
   render: h => h(App)
 }).$mount('#app')
 
-export { app }
+export { app, store }
