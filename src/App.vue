@@ -1,14 +1,7 @@
 <template>
-  <div id="app">
-    <demo></demo>
+  <div>
+    <transition>
+      <router-view class="router-view"></router-view>
+    </transition>
   </div>
 </template>
-
-<script>
-import demo from './components/demo.vue'
-
-export default {
-  name: 'app',
-  components: { demo }
-};
-</script>
