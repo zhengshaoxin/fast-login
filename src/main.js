@@ -3,11 +3,13 @@ import VueRouter from 'vue-router'
 import App from './App'
 import store from './store'
 import Home from './components/home'
+import Search from './components/search'
 
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: Home }
+  { path: '/', component: Home },
+  { path: '/search', component: Search}
 ];
 
 const router = new VueRouter({
