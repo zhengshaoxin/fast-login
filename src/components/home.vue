@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="weui-cells" style="margin-top: 0px">
-      <div class="weui-cell">
-        <div class="weui-cell__bd">
-          <p>{{ user.phone }}</p>
+      <div class="weui-cell" v-for="item in users">
+        <div class="weui-cell__bd" :title="item.nickname">
+          <p>{{ item.account }}</p>
         </div>
-        <div class="weui-cell__ft">{{ user.uid }}</div>
+        <div class="weui-cell__ft">{{ item.uid }}</div>
       </div>
     </div>
   </div>
@@ -16,7 +16,7 @@ import { store } from '../main'
 
 export default {
   computed: {
-    user() {
+    users() {
       return this.$store.state.user
     }
   }
